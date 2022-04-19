@@ -1,0 +1,168 @@
+/* Custom properties */
+:root {
+  --orange-400: hsl(31, 77%, 52%);
+  --cyan-600: hsl(184, 100%, 22%);
+  --cyan-800: hsl(179, 100%, 13%);
+
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+  --gray-100: hsl(0, 0%, 95%);
+}
+
+
+/* Resets */
+/* Reset margin */
+* {
+  margin: 0;
+}
+/* Links */
+a {
+  all: unset;
+  cursor: pointer;
+}
+/* Reset list styles */
+ul, li {
+  all: unset;
+}
+
+
+/* Main layout */
+/* #region */
+
+body {
+  /* Allows for vertical centering */
+  min-height: 100vh;
+
+  /* Centers content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-color: var(--gray-100);
+
+}
+
+
+/* Main container. Switches from 1-row to 1-column layout without media query */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: min(105ch, 85%);
+  /* At width of 90ch, switches to column layout */
+  --threshold: calc(90ch - 1px);
+}
+/* flex-basis causes the switching */
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+
+.attribution {
+  margin-top: 2rem;
+}
+
+/* #endregion */
+
+
+/* Other styling */
+/* #region */
+
+body {
+  font-family: 'Lexand Deca', sans-serif;
+  color: var(--white-transparent);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.card {
+  padding: 3rem;
+
+}
+
+.card-header {
+  margin-top: 2rem;
+
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--gray-100);
+  text-transform: uppercase;
+}
+.card-text {
+  margin-top: 1.5rem;
+  max-width: 35ch;
+}
+.card-cta {
+  display: block;
+  
+  /* Going from mobile width to desktop width, margin above CTA grows */
+  margin-top: clamp(1.5rem, 8vw, 6rem);
+  margin-bottom: auto;
+
+  width: fit-content;
+
+  padding-block: 12px;
+  padding-inline: 32px;
+
+  border-radius: 25px;
+  background-color: var(--gray-100);
+
+}
+
+/* Card-dependent colors */
+/* Background color */
+.card:nth-child(1) {
+  background-color: var(--orange-400);
+}
+.card:nth-child(2) {
+  background-color: var(--cyan-600);
+}
+.card:nth-child(3) {
+  background-color: var(--cyan-800);
+}
+/* CTA color */
+.card:nth-child(1) > .card-cta {
+  color: var(--orange-400);
+}
+.card:nth-child(2) > .card-cta {
+  color: var(--cyan-600);
+}
+.card:nth-child(3) > .card-cta {
+  color: var(--cyan-800);
+}
+/* CTA color */
+.card:nth-child(1) > .card-cta:hover,
+.card:nth-child(1) > .card-cta:focus {
+  background-color: var(--orange-400);
+  outline: 2px solid var(--gray-100);
+  color: var(--gray-100);
+}
+.card:nth-child(2) > .card-cta:hover,
+.card:nth-child(2) > .card-cta:focus {
+  background-color: var(--cyan-600);
+  outline: 2px solid var(--gray-100);
+  color: var(--gray-100);
+}
+.card:nth-child(3) > .card-cta:hover,
+.card:nth-child(3) > .card-cta:focus {
+  background-color: var(--cyan-800);
+  outline: 2px solid var(--gray-100);
+  color: var(--gray-100);
+}
+
+/* #endregion */ 
+
+
+/* Make attribution text visible */
+.attribution {
+  color: black;
+}
+.attribution > a:hover,
+.attribution > a:focus {
+  text-decoration: underline;
+}
