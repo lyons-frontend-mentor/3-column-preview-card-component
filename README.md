@@ -10,7 +10,7 @@ Build a responsive layout matching the given design.
 
 ### Links
 
-- Check out the [solution on Frontend Mentor here](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-/hub/responsive-layout-without-media-queries-Hk5KMphV9).
+- Check out the [solution on Frontend Mentor here](https://www.frontendmentor.io/solutions/responsive-layout-without-media-queries-Hk5KMphV9).
 - Check out the [live site here](https://lyons-frontend-mentor.github.io/3-column-preview-card-component/).
 
 ### Built with
