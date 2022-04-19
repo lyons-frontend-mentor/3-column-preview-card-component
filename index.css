@@ -78,6 +78,11 @@ body {
   font-weight: 400;
 }
 
+.switcher {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .card {
   padding: 3rem;
 
