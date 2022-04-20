@@ -8,6 +8,18 @@
   --gray-100: hsl(0, 0%, 95%);
 }
 
+/* Visually hide element, still visible to screen readers */
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
 
 /* Resets */
 /* Reset margin */
@@ -28,7 +40,7 @@ ul, li {
 /* Main layout */
 /* #region */
 
-body {
+main {
   /* Allows for vertical centering */
   min-height: 100vh;
 
@@ -52,6 +64,9 @@ body {
   max-width: min(105ch, 85%);
   /* At width of 90ch, switches to column layout */
   --threshold: calc(90ch - 1px);
+
+  /* Gives room for attribution on mobile */
+  margin-bottom: 3rem;
 }
 /* flex-basis causes the switching */
 .switcher > * {
@@ -61,7 +76,9 @@ body {
 
 
 .attribution {
-  margin-top: 2rem;
+  position: absolute;
+  margin-inline: auto;
+  bottom: 1rem;
 }
 
 /* #endregion */
