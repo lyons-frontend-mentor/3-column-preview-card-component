@@ -159,19 +159,19 @@ body {
 }
 /* CTA color */
 .card:nth-child(1) > .card-cta:hover,
-.card:nth-child(1) > .card-cta:focus {
+.card:nth-child(1) > .card-cta:focus-visible {
   background-color: var(--orange-400);
   outline: 2px solid var(--gray-100);
   color: var(--gray-100);
 }
 .card:nth-child(2) > .card-cta:hover,
-.card:nth-child(2) > .card-cta:focus {
+.card:nth-child(2) > .card-cta:focus-visible {
   background-color: var(--cyan-600);
   outline: 2px solid var(--gray-100);
   color: var(--gray-100);
 }
 .card:nth-child(3) > .card-cta:hover,
-.card:nth-child(3) > .card-cta:focus {
+.card:nth-child(3) > .card-cta:focus-visible {
   background-color: var(--cyan-800);
   outline: 2px solid var(--gray-100);
   color: var(--gray-100);
@@ -185,6 +185,6 @@ body {
   color: black;
 }
 .attribution > a:hover,
-.attribution > a:focus {
+.attribution > a:focus-visible {
   text-decoration: underline;
 }
